@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celebration Page</title>
+    <style>
+        /* Slide styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .slide.show {
+            display: flex;
+        }
+
+        /* Pop-up styles */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 1.5rem;
+            display: none;
+            border-radius: 10px;
+        }
+
+        /* Button styles */
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #ff9900;
+        }
+
+        /* Light effect styles */
+        .light {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: lightEffect 1s ease-out infinite;
+            display: none;
+        }
+
+        @keyframes lightEffect {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Slides -->
+<div class="slide show" id="slide1" style="background-color: #ff3366;">
+    <div>Do your parents sell stars?! ’Cause someone stole them and put them in your beautiful eyes!</div>
+</div>
+<div class="slide" id="slide2" style="background-color: #33ccff;">
+    <div>Don't smile. Because if you smile then everything about you will be perfect and I will fall in love instantly.(u dont want it right i suggest u dont smile)</div>
+</div>
+<div class="slide" id="slide3" style="background-color: #66ff66;">
+    <div> Oh Nice hair, wanna mess it up in bed?</div>
+</div>
+<div class="slide" id="slide4" style="background-color: #ff9900;">
+    <div>I’m not a photographer, but I can definitely picture ur fit going hard.</div>
+</div>
+<div class="slide" id="slide5" style="background-color: #ff66cc;">
+    <div>u need to know your cool-down routine… 'Cause you cant be making everyone feel hot!</div>
+    <button class="button" id="nextPageButton" onclick="goToNextPage()">Click Me to Go to Next Page</button>
+</div>
+
+<!-- Pop-up -->
+<div class="popup" id="popup">tu jasa ahes tsa chaan ahe!</div>
+
+<!-- Light Effect -->
+<div class="light" id="lightEffect"></div>
+
+<script>
+    // Light effect show and hide
+    function showLightEffect() {
+        let light = document.getElementById('lightEffect');
+        light.style.display = 'block';
+        setTimeout(() => {
+            light.style.display = 'none';
+        }, 10000);
+    }
+
+    // Show popup and light effect on button click
+    document.getElementById('nextPageButton').addEventListener('click', function () {
+        document.getElementById('popup').style.display = 'block';
+        showLightEffect();
+        setTimeout(function () {
+            window.location.href = 'flowers.html'; // Replace with your next page URL
+        }, 3000);
+    });
+
+    // Slide transition logic
+    let slideIndex = 0;
+    let slides = document.querySelectorAll('.slide');
+    function changeSlide() {
+        slides.forEach(slide => slide.classList.remove('show'));
+        slideIndex++;
+        if (slideIndex >= slides.length) slideIndex = 0;
+        slides[slideIndex].classList.add('show');
+    }
+
+    setInterval(changeSlide, 4000); // Change slides every 4 seconds
+</script>
+
+</body>
+</html>

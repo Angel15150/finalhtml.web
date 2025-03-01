@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You 💖</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe4f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .letter {
+            background-color: white;
+            padding: 30px;
+            width: 60%;
+            max-width: 500px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .hearts {
+            font-size: 2rem;
+            position: absolute;
+            top: -50px;
+            animation: floatHearts 5s infinite;
+        }
+        @keyframes floatHearts {
+            0% { transform: translateY(0px); opacity: 1; }
+            100% { transform: translateY(-120px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts">❤️💖💞💗💕</div>
+
+    <div class="letter">
+        <h2> Thank You </h2>
+        <p>
+            Thank you for being there for me .You’re the first person who’s ever listened to me without trying to fix me..
+            well lastly sir thank u for being patient ,kind and helpful and giving me some cute enough life lessons 
+            btw my wardrobe has been filled with long dresses god knows why!!
+
+            <br><br>
+            With all my dumbness, <br>  **Angel** 
+        </p>
+    </div>
+
+    <div class="hearts">❤️💖💞💗💕</div>
+
+</body>
+</html>

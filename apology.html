@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry 💌</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fde4e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .letter {
+            background-color: white;
+            padding: 30px;
+            width: 60%;
+            max-width: 500px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            background-color: #ff6666;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ff3333;
+        }
+        .hearts {
+            font-size: 2rem;
+            position: absolute;
+            top: -50px;
+            animation: floatHearts 5s infinite;
+        }
+        @keyframes floatHearts {
+            0% { transform: translateY(0px); opacity: 1; }
+            100% { transform: translateY(-120px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hearts">❤️💖💞💗💕</div>
+
+    <div class="letter">
+        <h2>💌 I'm Truly Sorry 💌</h2>
+        <p>
+            oh the content was much of cringy till now.marathi madhe type karte mla nahi mahiti if html will support it...so sir pahilla tr sorry ki tumchyashi bolna was just a challenge well tujjhyashi bolna madhe mla kharach nahi athavla ki me challenge karat hoti.
+            but tu mla hate nahi karat avedha tr mla mahiti ahe ka karto ka? and fakt tumhala sorry bolaycha hota bcs me irritate karte and many more things but thts not even funny anymore.
+            this whole html project irritate karnyasarkha hota pn kharach it was an apology frm my side. me parat nahi karnar kharach yr. but mla nahi pahijel ki tu roj bolava majhyashi ya roj timewaste karava tujha but atleast accept my apology and dont hate me for this.
+        </p>
+        <button class="button" onclick="goToThankYou()">do u Forgive Me? </button>
+    </div>
+
+    <div class="hearts">❤️💖💞💗💕</div>
+
+    <script>
+        function goToThankYou() {
+            window.location.href = "thank_you.html"; // Redirects to the Final Thank You Page
+        }
+    </script>
+
+</body>
+</html>

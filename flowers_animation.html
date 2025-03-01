@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Style Boy Giving Flowers to Girl</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .scene {
+            width: 800px;
+            height: 500px;
+            background-color: #f7b7a3;
+            border-radius: 20px;
+            position: relative;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .message {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .boy-message {
+            left: 10%;
+        }
+
+        .girl-message {
+            right: 10%;
+        }
+
+        .flower-emoji {
+            font-size: 40px;
+            position: absolute;
+        }
+
+        .flower-boys-hand {
+            top: 40%;
+            left: 25%;
+        }
+
+        .flower-girls-hand {
+            top: 40%;
+            right: 25%;
+        }
+
+    </style>
+</head>
+<body>
+    <p>oh why are we bald? bcs i am a new coder idk how to put hais on character sir</p>
+
+    <div class="scene">
+        <!-- SVG Scene -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+
+            <!-- Boy Character -->
+            <g id="boy">
+                <!-- Head -->
+                <circle cx="150" cy="180" r="40" fill="#ffe4b5" />
+                <!-- Body -->
+                <rect x="130" y="220" width="40" height="80" fill="#00bfff" />
+                <!-- Arms (one giving flowers) -->
+                <line x1="130" y1="230" x2="90" y2="250" stroke="#ffe4b5" stroke-width="10" />
+                <line x1="170" y1="230" x2="200" y2="220" stroke="#ffe4b5" stroke-width="10" />
+                <!-- Eyes -->
+                <circle cx="140" cy="175" r="5" fill="black" />
+                <circle cx="160" cy="175" r="5" fill="black" />
+            </g>
+
+            <!-- Girl Character -->
+            <g id="girl">
+                <!-- Head -->
+                <circle cx="650" cy="180" r="40" fill="#ffe4b5" />
+                <!-- Body -->
+                <rect x="630" y="220" width="40" height="80" fill="#ff1493" />
+                <!-- Arms -->
+                <line x1="630" y1="230" x2="600" y2="240" stroke="#ffe4b5" stroke-width="10" />
+                <line x1="670" y1="230" x2="700" y2="220" stroke="#ffe4b5" stroke-width="10" />
+                <!-- Eyes -->
+                <circle cx="640" cy="175" r="5" fill="black" />
+                <circle cx="660" cy="175" r="5" fill="black" />
+            </g>
+
+        </svg>
+
+        <!-- Flower Emojis -->
+        <div class="flower-emoji flower-boys-hand">🌻🌻🌻</div>
+        <div class="flower-emoji flower-girls-hand">🌻🌻🌻</div>
+
+        <!-- Messages -->
+        <div class="message boy-message">"thank u!"</div>
+        <div class="message girl-message">"for u!"</div>
+    </div>
+
+</body>
+</html>
+ <button class="button" id="nextButton" onclick="goToNextPage()">Click Me 🌻</button>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById("sunflower").classList.add("show-flower");
+            setTimeout(() => {
+                document.getElementById("nextButton").style.display = "block";
+            }, 2000);
+        }, 3000);
+
+        function goToNextPage() {
+            window.location.href = "welcome_letter.html"; // Redirect to the Welcome Letter page
+        }
+    </script>
+
+</body>
+</html>

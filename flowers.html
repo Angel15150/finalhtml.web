@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers for You 🌸</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe4e1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .flowers {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            animation: float 4s infinite alternate;
+        }
+        .message {
+            font-size: 1.8rem;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .message:hover {
+            transform: scale(1.1);
+        }
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flowers">🌸🌻🌺💐🌷🌼🌹🌻🌸🌺</div>
+    
+    <div class="message" onclick="goToApology()">
+        Are you a sunflower? Because you brighten up my day.
+        Are you a tulip? Because I’m stuck in the petals of your idiotness.
+        Are you a daisy? Because I’m crazy about you.
+        Are you a rose? Because you make my heart bloom.
+        Are you a daffodil? Because you make me feel like spring has sprung.
+        Are you a lily? Because you’re as elegant and beautiful as one.
+        Are you a hibiscus? Because you’re stunningly handsome and exotic.
+        Are you a marigold? Because you’re bold and vibrant.
+        Are you a cactus? Because you’re tough and resilient, yet still a charmer.
+        but If you were a flower, you’d be a damndelion—beautiful, wild, and hard to resist. 
+        🌻 Click to continue💗
+    </div>
+    
+    <div class="flowers">🌸🌻🌺💐🌷🌼🌹🌻🌸🌺</div>
+
+    <script>
+        function goToApology() {
+            window.location.href = "apology.html"; // Redirects to the Apology Letter Page
+        }
+    </script>
+
+</body>
+</html>

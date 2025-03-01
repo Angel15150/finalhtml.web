@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Letter 🎈</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffebf0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .letter {
+            position: relative;
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            max-width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transform: scale(0);
+            opacity: 0;
+            animation: popUp 1s forwards 1s;
+            z-index: 10;
+        }
+        @keyframes popUp {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        .balloon {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 6s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.5rem;
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="letter">
+            <h2>hello aayu</h2>
+            <p>Hey sir!how are u doing hope u are doing good.With that nonchalant smile of urs well ur girlfriend likes it more ah but i like it more in a pretty stuning way..
+            sir welcome! first of all i hope u are excited for the coding here this took months ngl i was cooked but i am glad that i am able to do pull this and i hope u will enjoy it...
+            sir u are a dirac delta function everywhere else I look in empty but when I look at you I tend to infinity..oh i just thought this would impress u (thts the only thing ik in physics)
+            oh i am writing pretty words now he thinks i desperately want him. (too cringy)  
+            shalll we begin sir?</p>
+            <button class="button" onclick="goToQuiz()">Let's Start</button>
+        </div>
+    </div>
+
+    <script>
+        function goToQuiz() {
+            window.location.href = "quiz.html"; // Redirects to Quiz Page
+        }
+
+        function createBalloons() {
+            for (let i = 0; i < 15; i++) {
+                let balloon = document.createElement("div");
+                balloon.innerText = "🎈";
+                balloon.classList.add("balloon");
+                balloon.style.left = `${Math.random() * 100}%`;
+                balloon.style.animationDuration = `${Math.random() * 3 + 4}s`;
+                balloon.style.fontSize = `${Math.random() * 1.5 + 1.5}rem`; // Different sizes
+                document.body.appendChild(balloon);
+            }
+        }
+        createBalloons();
+    </script>
+
+</body>
+</html>
+
